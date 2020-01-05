@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Yujin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/photo_me.jpg"
   bio              : "Explore, Learn, Share"
   location         : "Republic of Korea"
   email            : "lmmyhbb@gmail.com"

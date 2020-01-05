@@ -111,11 +111,11 @@ author:
   avatar           : "/assets/images/photo_me.jpg"
   bio              : "Explore, Learn, Share"
   location         : "Seoul, Republic of Korea"
-  email            : "lmmyhbb@gmail.com"
+  email            : #"lmmyhbb@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: #mailto:lmmyhbb@gmail.com
+      url: mailto:lmmyhbb@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

@@ -9,11 +9,11 @@ categories: "Python"
 코드 살펴 보다가 간단히 정리해 두면 좋을 것 같아서 하는 python 첫 포스팅! 🤞<br>
 
 우선 `vars()`에 대해 사용해본 건 변수를 문자열로 access할 때였다.<br>
-`vars()['year'] = 2020` 이렇게 쓰는 건 `year = 2020` 랑 같게 된다.<br>
+`vars()['year'] = 2020` 이렇게 쓰는 건 `year = 2020` 랑 같게 된다.<br><br>
 
-for 문을 돌면서 변수를 다수 생성해야 하는데,<br>
+내 경우엔, for 문을 돌면서 변수를 다수 생성해야 하는데,<br>
 변수명을 개별적으로 설정해줄 필요가 있을 때 유용하게 사용했다.<br>
-다음처럼 1부터 연속하는 10개의 홀수를 x_1, x_2, ..., x_10에 쉽게 할당할 수 있다.
+다음처럼 1부터 연속하는 10개의 홀수를 x_1, x_2, ..., x_10에 쉽게 할당할 수 있다.<br>
 
 ```python
 for i in range(10):
@@ -22,7 +22,7 @@ for i in range(10):
 
 ⭐⭐⭐ 이번에 살펴볼 건, <br>
 vars()를 통해 클래스와 인스턴스와 관련된 정보(변수, 속성 및 메소드)를 dict로 반환하는 방법이다.<br>
-우선, class를 대충 하나 생성해 보겠다.
+우선, class를 대충 하나 생성해 보겠다.<br>
 <br>
 
 ```python
@@ -39,26 +39,26 @@ class Fruits:
 
 jmt = Fruits('applemango', 21, 'Peru')
 ```
-
+<br>
 달달한 게 땡겨서 A급 페루산 애플망고를 데리고 왔다.<br>
 `vars()` 괄호 안에 `jmt`를 넣으면 해당 인스턴스가 가진 속성들을 딕셔너리 형태로 반환해 준다.<br>
 ```python
 vars(jmt)
 ```
-위의 코드를 수행하면, `{'name': 'applemango', 'brix': 21, 'origin': 'Peru'}` 다음과 같은 <br> 결과물을 얻을 수 있다. 이 때, 아직  `get_grade()` 메서드는 수행하지 않았기 때문에 grade에 대한 정보는 반영되지 않았다.<br>
+<br>위의 코드를 수행하면, `{'name': 'applemango', 'brix': 21, 'origin': 'Peru'}` 다음과 같은 <br> 결과물을 얻을 수 있다. 이 때, 아직  `get_grade()` 메서드는 수행하지 않았기 때문에 grade에 대한 정보는 반영되지 않았다.<br>
 
 ```python
 jmt.get_grade()
 vars(jmt)
 ```
-`get_grade()` 메서드를 수행하고, 다시 정보를 조회해 보면 <br>다음과 같이 grade에 대한 정보도 포함된 딕셔너리를 얻을 수 있다.<br>
+<br>`get_grade()` 메서드를 수행하고, 다시 정보를 조회해 보면 <br>다음과 같이 grade에 대한 정보도 포함된 딕셔너리를 얻을 수 있다.<br>
 `{'name': 'applemango', 'brix': 21, 'origin': 'Peru', 'grade': 'A'}` 
 
 <br> 이번엔, 클래스 자체를 조회해보면 어떻게 될까? <br>
 ```python
 vars(Fruits)
 ```
-코드를 수행하게 되면
+<br>코드를 수행하게 되면
 > `mappingproxy({'__module__': '__main__',
               '__init__': <function __main__.Fruits.__init__(self, name, brix, origin)>,
               'get_grade': <function __main__.Fruits.get_grade(self)>,
@@ -89,7 +89,7 @@ class Fruits:
 
 vars(Fruits)
 ```
-코드를 수행하게 되면, 
+<br>코드를 수행하게 되면, 
 > `mappingproxy({'__module__': '__main__',
               'count': 0,
               '__init__': <function __main__.Fruits.__init__(self, name, brix, origin)>,

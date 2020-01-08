@@ -4,6 +4,8 @@ date: 2020-01-08
 tags:
   - Python
 categories: "Python"
+
+classes: wide
 ---
 
 코드 살펴 보다가 간단히 정리해 두면 좋을 것 같아서 하는 python 첫 포스팅! 🤞<br>
